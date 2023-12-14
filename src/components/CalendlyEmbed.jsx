@@ -15,7 +15,6 @@ const CalendlyEmbed = ({ url }) => {
 
 	return (
 		<div className="container h-[500px]">
-			<h1 className=" font-bold text-center">Schedule an Appointment</h1>
 			<div
 				className="calendly-inline-widget h-full w-[100%]"
 				data-url={url}
