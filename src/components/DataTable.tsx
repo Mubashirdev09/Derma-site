@@ -4,18 +4,16 @@ import { TableCaption, TableBody, TableRow, TableCell } from "./ui/table";
 
 interface DataTableProps {
 	Data: object;
+	Summary: String;
 }
 
-const DataTable: React.FC<DataTableProps> = ({ Data }) => {
+const DataTable: React.FC<DataTableProps> = ({ Data, Summary }) => {
 	return (
-		<div>
-			<TableCaption className=" text-lg font-bold text-black">
-				Your Skin Evaluation
+		<>
+			<TableCaption className=" text-lg font-bold text-black text-center">
+				Your Skin Evaluation Summary
 			</TableCaption>
-			<p className=" text-center">
-				According to our AI Evaluation, The chances of you having these
-				issues are:
-			</p>
+			<p className=" text-center">{Summary}</p>
 			<TableBody>
 				{Object.values(Data).map((item) => {
 					return (
@@ -38,7 +36,7 @@ const DataTable: React.FC<DataTableProps> = ({ Data }) => {
 				})}
 			</TableBody>
 
-			<p className="mt-3">
+			{/* <p className="mt-3">
 				<em>
 					<strong className=" text-red-800">DISCLAIMER:</strong>
 					This is just an estimate to give you an idea of your current
@@ -46,8 +44,8 @@ const DataTable: React.FC<DataTableProps> = ({ Data }) => {
 					the appointment, but this can give you a indication of what
 					issue might be prevalant.
 				</em>
-			</p>
-		</div>
+			</p> */}
+		</>
 	);
 };
 
