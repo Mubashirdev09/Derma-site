@@ -165,7 +165,10 @@ export const UploadDropzone = () => {
 					</Button>
 				</>
 			) : (
+			<div className="container h-[500px]">
+			<h1 className=" font-bold text-center">Schedule an Appointment</h1>
 				<CalendlyEmbed url={calendlyCode} />
+				</div>
 			)}
 		</>
 	);
